@@ -1,6 +1,7 @@
 Hey, 
 nutzt du hier das Git noch?
 
+Änderungen hier!
 Gruß
 
 Chris
