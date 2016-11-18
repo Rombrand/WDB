@@ -6,5 +6,7 @@ Gruß
 
 Chris
 
+und Änderungen hier!!
 1. Änderung in chris branch: Hier ändere ich die Datei und merge sie in den master branch
 
+Überall Änerungen!!!
