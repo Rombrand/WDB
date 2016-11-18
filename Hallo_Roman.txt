@@ -1,8 +1,0 @@
-Hey, 
-nutzt du hier das Git noch?
-
-2. Änderung im master branch
-
-Gruß
-
-Chris
