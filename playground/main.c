@@ -4,8 +4,9 @@
 int main()
 {
 	char c;
+
 	// Hier fuege ich nur ein Kommentatr ein
-	printf("\nBla Hellseher\n\n");
+	printf("\nDas ist der Hellseher\n\n");
 
 	printf("Mit welchem Buchstaben beginnt ihr Vorname? \t");
 	c = getchar();
