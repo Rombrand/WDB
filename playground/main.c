@@ -4,7 +4,7 @@
 int main()
 {
 	char c;
-	printf("\nHellseher\n\n");
+	printf("\nDas ist der Hellseher\n\n");
 
 	printf("Mit welchem Buchstaben beginnt ihr Vorname? \t");
 	c = getchar();

@@ -1,6 +1,8 @@
 #
-#   Makefile for making love
+#   Makefile
 #
 
-main : main.c
+bla : main.c
+	@echo 'start'
 	gcc main.c -o bla
+	@echo 'finish'
