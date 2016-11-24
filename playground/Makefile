@@ -2,5 +2,5 @@
 #   Makefile for making love
 #
 
-main : main.c
+mainbla : main.c
 	gcc main.c -o bla
