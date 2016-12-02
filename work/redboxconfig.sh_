@@ -1,0 +1,78 @@
+if [ "$schritt" = "v1rbxconf" ]
+then
+
+__upload__() {
+
+#SERVER=192.168.4.174
+SERVER=192.168.4.177
+#SERVER=192.168.4.222
+#SERVER=192.168.4.240
+USER=root
+PASSWORD=wmuepa09
+ftp -v -n $SERVER <<EOS
+user $USER $PASSWORD   
+<TODO>
+lcd ~/git.deutaeit.de/repos-test/squish-test-results/squish-test-projects/09-Validation/suite_7.8_MMI-to-MMI_communication/shared/REDBOX/configured_sw
+</TODO>
+cd /tmp
+send mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_*-*-VEK_Stimulator_2404_V1_Alstom.tgz
+quit
+EOS
+
+# Inside the <<EOS EOS block return of an ?Invalid command, already send and tested configurations
+#send mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_000016-c3631-VEK_Stimulator_2404_V1_Alstom.tgz
+
+}
+
+    echo ""
+    echo "An Release von Jenkins Build Job | MFR1_BUILD_configuration_Fast | anpassen"
+    echo ""
+    read input
+    let DEBUG="$input"
+
+    if [ "$DEBUG" == "1" ]
+    then
+        sudo ifconfig eth0 add 192.168.4.178
+        echo ""
+        echo "Löschen der Daten auf der Redbox: rm -rf /mfr/"
+        echo ""       
+        #ssh root@192.168.4.174 'rm -rf /mfr2'
+        ssh root@192.168.4.177 'rm -rf /mfr'
+        #ssh root@192.168.4.222 'rm -rf /mfr2'
+        #ssh root@192.168.4.240 'rm -rf /mfr2'
+        __upload__
+        #ssh root@192.168.4.174 'tar -vx -f /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_000016-c3631-VEK_Stimulator_2404_V1_Alstom.tgz -C /mfr2/'
+        #ssh root@192.168.4.174 'rm /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_000016-c3631-VEK_Stimulator_2404_V1_Alstom.tgz'
+        #ssh root@192.168.4.174 'rm /mfr/.active'
+        #ssh root@192.168.4.174 'touch /mfr2/.active'
+        #ssh root@192.168.4.174 'reboot'
+        #sleep 30s
+        #ssh root@192.168.4.174 '/mfr2/./mfr1.sh'
+        #---
+        ssh root@192.168.4.177 'mv /home/startup /home/startup_'
+        ssh root@192.168.4.177 'killall mfr1'
+        ssh root@192.168.4.177 'tar -vx -f /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_*-*-VEK_Stimulator_2404_V1_Alstom.tgz -C /mfr/'
+        ssh root@192.168.4.177 'rm /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_*-*-VEK_Stimulator_2404_V1_Alstom.tgz'
+        ssh root@192.168.4.177 'rm /mfr2/.active'
+        ssh root@192.168.4.177 'touch /mfr/.active'
+        ssh root@192.168.4.177 '/mfr/./mfr1.sh'
+        ssh root@192.168.4.177 'reboot;exit'
+        sleep 30s
+        ssh root@192.168.4.177 '/mfr/./mfr1.sh'
+        ssh root@192.168.4.177 'mv /home/startup_ /home/startup'
+        #---       
+        #ssh root@192.168.4.222 'tar -vx -f /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_*-*-VEK_Stimulator_2404_V1_Alstom.tgz -C /mfr2/'
+        #ssh root@192.168.4.222 'rm /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_*-*-VEK_Stimulator_2404_V1_Alstom.tgz'
+        #ssh root@192.168.4.222 'touch /mfr2/.active'
+        #ssh root@192.168.4.222 'reboot'
+        #sleep 30s
+        #ssh root@192.168.4.222 '/mfr2/./mfr1.sh'
+        #---       
+        #ssh root@192.168.4.240 'tar -vx -f /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_*-*-VEK_Stimulator_2404_V1_Alstom.tgz -C /mfr2/'
+        #ssh root@192.168.4.240 'rm /tmp/mfr1-Release_1_0_VEK_Stimulator_2404_V1_Alstom_BUILD_*-*-VEK_Stimulator_2404_V1_Alstom.tgz'
+        #ssh root@192.168.4.240 'touch /mfr2/.active'
+        #ssh root@192.168.4.240 'reboot;exit;'
+        #sleep 30s
+        #ssh root@192.168.4.240 '/mfr2/./mfr1.sh'
+    fi
+fi
