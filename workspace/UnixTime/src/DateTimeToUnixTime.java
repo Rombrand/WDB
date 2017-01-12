@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class DateTimeToUnixTime 
+public class DateTimeToUnixTime
 {
 	
 	/** Datum+Zeit in Unix-Zeit.
@@ -25,13 +25,12 @@ public class DateTimeToUnixTime
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		/*
 		Scanner reader = new Scanner(System.in);
 		System.out.println("Enter a number: ");
 		int n = reader.nextInt();
-		*/
+		
 		DateTimeToUnixTime test = new DateTimeToUnixTime();
 		System.out.println(test.unixzeit(2016, 12, 6, 12, 30, 1));
 
