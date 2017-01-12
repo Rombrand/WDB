@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# install fbgrab-1.3
+
 HELP='Usage: getfb.sh user@hostname png-file-name [rotation_in_degree]'
 TMP_FILE1=$(mktemp)
 TMP_FILE2=$(mktemp)
