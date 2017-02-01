@@ -1,5 +1,7 @@
-Windows Speicher;
-
+﻿Windows Speicher;
+	
+	windows 7  P6W4B-7G279-P3K2B-XVXFR-7K38H (30.01.17) 
+	
 cmd --> 	diskpart
 			list disk
 			select disk x
@@ -73,6 +75,7 @@ DMI
 
 
 Linux Allgemein
+	sudo mount -t cifs -o username=wendtc //bg-file2.werk.deuta.de/Daten /mnt/DEINORDNER
 	ps uax | grep 'prozess'   kill Nr.
 
 	history | grep 'Befehl'
@@ -104,7 +107,7 @@ Netzwerk	https://wiki.ubuntuusers.de/Netzwerk/
 	sudo ifdown eth0	sudo ifup eth0
 
 	# Erstellen:	$ ifconfig eth1:1 192.168.3.1
-	# Löschen:	$ ifconfig eth1 del 192.168.3.1
+	# Löschen:		$ ifconfig eth1 del 192.168.3.1
 
 	Mc_Adresse ändern
 	1. Schließen Sie das Terminal nach der obigen Anleitung, öffnen Sie es erneut und loggen Sie sich mit "su root" und dem Root-Passwort ein.
