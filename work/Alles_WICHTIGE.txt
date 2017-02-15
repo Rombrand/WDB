@@ -2,7 +2,7 @@
 	
 	windows 7  P6W4B-7G279-P3K2B-XVXFR-7K38H (30.01.17) 
 	
-cmd --> 	diskpart
+cmd -->			diskpart
 			list disk
 			select disk x
 			clean
@@ -34,7 +34,7 @@ System
 	- automatisches Verzeichniss löschen für qmake und manuell eingeben
 	- unter git ALTSTOM_ETCS BL3 ligt dieStiumlator Datei
 
-	Deuta 	deuta01
+	Deuta	deuta01
 	SVN	wendtc 
 
 
@@ -54,10 +54,12 @@ DMI
 	SD-Karte mit Grünen Punkt UDP
 	ohne MVB (RedBox)
 	
-	DMI1	-->	192.168.4.180
-	DMI2	-->	192.168.4.179
-	PC   	-->	192.168.4.178
-	redbox	-->	192.168.4.177
+	
+
+	DMI1	-->	192.168.4.92
+	DMI2	-->	192.168.4.93
+	PC	-->	192.168.4.91
+	redbox	-->	192.168.4.94
 
 	root	-->	dat
 
@@ -72,7 +74,10 @@ DMI
 	
 	tar xzhf file
 	tar -xvf file  --strip-components 1
+	
 
+	telmet localhost 9001
+	log dump	
 
 Linux Allgemein
 	sudo mount -t cifs -o username=wendtc //bg-file2.werk.deuta.de/Daten /mnt/DEINORDNER
