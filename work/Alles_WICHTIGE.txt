@@ -78,6 +78,11 @@ DMI
 
 	telmet localhost 9001
 	log dump	
+	
+	
+	ip.src == 192.168.4.94 && udp.port == 20009
+	
+	ip.src == 192.168.4.94 && udp.port == 20009 && udp[22] >= 0x08 && udp[22] >= 0x08
 
 Linux Allgemein
 	sudo mount -t cifs -o username=wendtc //bg-file2.werk.deuta.de/Daten /mnt/DEINORDNER
