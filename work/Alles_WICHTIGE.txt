@@ -83,6 +83,8 @@ DMI
 	ip.src == 192.168.4.94 && udp.port == 20009
 	
 	ip.src == 192.168.4.94 && udp.port == 20009 && udp[22] >= 0x08 && udp[22] >= 0x08
+	
+	ip.src == 192.168.4.94 && udp.port != 20009 && udp[15] == 0x36  // Packer54 (0X36) MessageData Filtern (DMI to EVC)
 
 Linux Allgemein
 	sudo mount -t cifs -o username=wendtc //bg-file2.werk.deuta.de/Daten /mnt/DEINORDNER

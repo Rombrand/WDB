@@ -1,17 +1,15 @@
 
-#!/bin/sh
+HOST=$1
+USER='root'
+PASSWD='dat'
 
-    echo ""
-    echo "DMI Configuration"
-    echo ""
-    read input
-    let DEBUG="$input"
+echo ""
+echo "DMI Configuration"
+echo ""
 
-    if [ "$DEBUG" == "1" ]
-    then
-        #
-        scp '~/Downloads/SW*application.tgz.gz' root@192.168.4.177:/tmp
-        sshpass -p 'dat' ssh root@$1 'tar xzhf SW*pkg-application.tgz.tgz.gz'
-		sshpass -p 'dat' ssh root@$1 'exit;reboot'
-        fi
-fi
+scp '~/Downloads/SW*application.tgz.gz' root@$1:/tmp
+
+sshpass -p $PASSWD ssh $USER@$1 'rm -r /opt'
+
+sshpass -p $PASSWD ssh $USER@$1 'tar xzhf SW*pkg-application.tgz.tgz.gz'
+sshpass -p $PASSWD ssh $USER@$1 'exit;reboot
