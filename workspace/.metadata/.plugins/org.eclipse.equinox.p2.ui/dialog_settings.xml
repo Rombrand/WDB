@@ -4,8 +4,8 @@
 		<item value="825" key="DIALOG_WIDTH"/>
 		<item value="1|Noto Sans|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="637" key="DIALOG_HEIGHT"/>
-		<item value="548" key="DIALOG_X_ORIGIN"/>
-		<item value="282" key="DIALOG_Y_ORIGIN"/>
+		<item value="228" key="DIALOG_X_ORIGIN"/>
+		<item value="194" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.UpdateWizard.ResolutionResultsPage">
 		<item value="200" key="DetailsSashWeight"/>
@@ -18,8 +18,8 @@
 		<item value="840" key="DIALOG_WIDTH"/>
 		<item value="1|Noto Sans|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="856" key="DIALOG_HEIGHT"/>
-		<item value="540" key="DIALOG_X_ORIGIN"/>
-		<item value="172" key="DIALOG_Y_ORIGIN"/>
+		<item value="220" key="DIALOG_X_ORIGIN"/>
+		<item value="84" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.UpdateWizard.SelectableIUsPage">
 		<item value="200" key="DetailsSashWeight"/>
